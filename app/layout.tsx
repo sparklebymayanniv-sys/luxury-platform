@@ -17,12 +17,7 @@ export const metadata: Metadata = {
   description:
     "Luxury tattoo artistry — fine line, realism, custom pieces.",
 
-  metadataBase: new URL("https://bluediamondtattoostudio.com"),
-
-  // ✅ THIS IS THE FIX (Google verification)
-  verification: {
-    google: "hgLxBiaxxXLYmOqVUwtWDeg4Q_bNFp5MO8Kpxf61Lys",
-  },
+  metadataBase: new URL("https://www.bluediamondtattoostudio.com"),
 
   icons: {
     icon: [
@@ -31,31 +26,6 @@ export const metadata: Metadata = {
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: "/apple-touch-icon.png",
-  },
-
-  openGraph: {
-    title: "Blue Diamond Tattoo Studio",
-    description:
-      "Luxury tattoo artistry — fine line, realism, custom pieces.",
-    url: "https://bluediamondtattoostudio.com",
-    siteName: "Blue Diamond Tattoo Studio",
-    images: [
-      {
-        url: "/branding/blue_diamond_logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Blue Diamond Tattoo Studio logo",
-      },
-    ],
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Blue Diamond Tattoo Studio",
-    description:
-      "Luxury tattoo artistry — fine line, realism, custom pieces.",
-    images: ["/branding/blue_diamond_logo.png"],
   },
 };
 
@@ -69,7 +39,16 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="hgLxBiaxxXLYmOqVUwtWDeg4Q_bNFp5MO8Kpxf61Lys"
+        />
+      </head>
+
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
