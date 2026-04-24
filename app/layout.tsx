@@ -13,33 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  title: "Blue Diamond Tattoo Studio",
+  description:
+    "Luxury tattoo artistry — fine line, realism, custom pieces.",
+
   metadataBase: new URL("https://bluediamondtattoostudio.com"),
 
-  title: {
-    default: "Blue Diamond Tattoo Studio",
-    template: "%s | Blue Diamond Tattoo Studio",
-  },
-
-  description:
-    "Luxury tattoo artistry — fine line, realism, and custom pieces in Massachusetts.",
-
-  alternates: {
-    canonical: "/",
-  },
-
   icons: {
-  icon: [
-    { url: "/favicon.ico" },
-    { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-  ],
-  apple: "/apple-touch-icon.png",
-},
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 
   openGraph: {
     title: "Blue Diamond Tattoo Studio",
     description:
-      "Luxury tattoo artistry — fine line, realism, and custom pieces.",
+      "Luxury tattoo artistry — fine line, realism, custom pieces.",
     url: "https://bluediamondtattoostudio.com",
     siteName: "Blue Diamond Tattoo Studio",
     images: [
@@ -57,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Blue Diamond Tattoo Studio",
     description:
-      "Luxury tattoo artistry — fine line, realism, and custom pieces.",
+      "Luxury tattoo artistry — fine line, realism, custom pieces.",
     images: ["/branding/blue_diamond_logo.png"],
   },
 };
@@ -72,9 +64,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-black text-white">
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
