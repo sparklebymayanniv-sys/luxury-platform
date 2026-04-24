@@ -19,6 +19,11 @@ export const metadata: Metadata = {
 
   metadataBase: new URL("https://bluediamondtattoostudio.com"),
 
+  // ✅ THIS IS THE FIX (Google verification)
+  verification: {
+    google: "hgLxBiaxxXLYmOqVUwtWDeg4Q_bNFp5MO8Kpxf61Lys",
+  },
+
   icons: {
     icon: [
       { url: "/favicon.ico" },
