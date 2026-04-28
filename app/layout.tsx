@@ -19,6 +19,10 @@ export const metadata: Metadata = {
 
   metadataBase: new URL("https://www.bluediamondtattoostudio.com"),
 
+  verification: {
+    google: "hgLxBiaxxXLYmOqVUwtWDeg4Q_bNFp5MO8Kpxf61Lys",
+  },
+
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -39,16 +43,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <meta
-          name="google-site-verification"
-          content="hgLxBiaxxXLYmOqVUwtWDeg4Q_bNFp5MO8Kpxf61Lys"
-        />
-      </head>
-
-      <body className="min-h-full flex flex-col">
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
