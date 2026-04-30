@@ -1,49 +1,105 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from "next"
+import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "Blue Diamond Tattoo Studio",
-  description:
-    "Luxury tattoo artistry — fine line, realism, custom pieces.",
+  metadataBase: new URL("https://bluediamondtattoostudio.com"),
 
-  metadataBase: new URL("https://www.bluediamondtattoostudio.com"),
-
-  verification: {
-    google: "hgLxBiaxxXLYmOqVUwtWDeg4Q_bNFp5MO8Kpxf61Lys",
+  title: {
+    default: "Blue Diamond Tattoo Studio",
+    template: "%s | Blue Diamond Tattoo Studio",
   },
+
+  description:
+    "Blue Diamond Tattoo Studio in Attleboro MA. Custom tattoos, realism, black and grey, piercing, and original artwork.",
+
+  keywords: [
+    "tattoo shop Attleboro",
+    "tattoo artist Attleboro MA",
+    "realism tattoo Massachusetts",
+    "black and grey tattoo",
+    "piercing Attleboro",
+    "custom tattoos near me",
+  ],
 
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
-};
+
+  openGraph: {
+    title: "Blue Diamond Tattoo Studio",
+    description:
+      "Custom tattoos and piercing in Attleboro MA. Realism, black and grey, and original artwork.",
+    url: "https://bluediamondtattoostudio.com",
+    siteName: "Blue Diamond Tattoo Studio",
+    images: [
+      {
+        url: "/branding/blue_diamond_logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body style={{ margin: 0 }}>
+
+        {/* STRUCTURED DATA */}
+        <Script id="schema" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TattooParlor",
+            name: "Blue Diamond Tattoo Studio",
+            image:
+              "https://bluediamondtattoostudio.com/branding/blue_diamond_logo.png",
+            url: "https://bluediamondtattoostudio.com",
+            telephone: "+15084551948",
+
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "4 Park St",
+              addressLocality: "Attleboro",
+              addressRegion: "MA",
+              postalCode: "02703",
+              addressCountry: "US",
+            },
+
+            areaServed: [
+              "Attleboro MA",
+              "North Attleborough MA",
+              "Mansfield MA",
+              "Taunton MA",
+              "Pawtucket RI",
+              "Providence RI",
+              "Boston MA",
+            ],
+
+            openingHours: "Mo-Su 10:00-21:00",
+            priceRange: "$$",
+
+            sameAs: [
+              "https://www.instagram.com/bluediamond.tattoo_studio",
+            ],
+          })}
+        </Script>
+
+        {children}
+      </body>
     </html>
-  );
+  )
 }

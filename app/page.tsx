@@ -7,73 +7,37 @@ type GalleryItem = {
 
 export default function Home() {
   const services = [
-    "Black & Grey",
+    "Black and Grey",
     "Realism",
-    "Custom Pieces",
+    "Custom Tattoos",
     "Portrait Work",
     "Piercing",
-    "Cover-Ups",
+    "Cover Ups",
     "Paintings",
-    "Polynesian / Tribal",
+    "Polynesian Tribal",
   ]
 
   const gallery: GalleryItem[] = [
-    {
-      title: "Blindfold Cherub",
-      image: "/portfolio/blindfold-cherub-realism-tattoo.jpg",
-    },
-    {
-      title: "Dog Portrait",
-      image: "/portfolio/dog-portrait-realism-tattoo.jpg",
-    },
-    {
-      title: "Joker Realism",
-      image: "/portfolio/joker-realism-tattoo.jpg",
-    },
-    {
-      title: "Rose Hand",
-      image: "/portfolio/rose-hand-tattoo.jpg",
-    },
-    {
-      title: "Script Eye Sleeve",
-      image: "/portfolio/script-eye-sleeve-realism-tattoo-2.jpg",
-    },
-    {
-      title: "Cherry Blossom",
-      image: "/portfolio/tattoo-cherry-blossom-collarbone-fine-line.jpg",
-    },
-    {
-      title: "Clown Girl Hand",
-      image: "/portfolio/tattoo-clown-girl-hand-chicano.jpg",
-    },
-    {
-      title: "Skull Portrait Shoulder",
-      image: "/portfolio/tattoo-realism-skull-portrait-shoulder.jpg",
-    },
-    {
-      title: "Spartan Warrior",
-      image: "/portfolio/tattoo-spartan-warrior-forearm-realism.jpg",
-    },
-    {
-      title: "Theater Mask Hand",
-      image: "/portfolio/theater-mask-hand-tattoo.jpg",
-    },
-    {
-      title: "Turtle Floral Leg",
-      image: "/portfolio/turtle-floral-leg-tattoo.jpg",
-    },
-    {
-      title: "Wolf Shoulder",
-      image: "/portfolio/wolf-shoulder-realism-tattoo.jpg",
-    },
+    { title: "Blindfold Cherub", image: "/portfolio/blindfold-cherub-realism-tattoo.jpg" },
+    { title: "Dog Portrait", image: "/portfolio/dog-portrait-realism-tattoo.jpg" },
+    { title: "Joker Realism", image: "/portfolio/joker-realism-tattoo.jpg" },
+    { title: "Rose Hand", image: "/portfolio/rose-hand-tattoo.jpg" },
+    { title: "Script Eye Sleeve", image: "/portfolio/script-eye-sleeve-realism-tattoo-2.jpg" },
+    { title: "Cherry Blossom", image: "/portfolio/tattoo-cherry-blossom-collarbone-fine-line.jpg" },
+    { title: "Clown Girl Hand", image: "/portfolio/tattoo-clown-girl-hand-chicano.jpg" },
+    { title: "Skull Portrait Shoulder", image: "/portfolio/tattoo-realism-skull-portrait-shoulder.jpg" },
+    { title: "Spartan Warrior", image: "/portfolio/tattoo-spartan-warrior-forearm-realism.jpg" },
+    { title: "Theater Mask Hand", image: "/portfolio/theater-mask-hand-tattoo.jpg" },
+    { title: "Turtle Floral Leg", image: "/portfolio/turtle-floral-leg-tattoo.jpg" },
+    { title: "Wolf Shoulder", image: "/portfolio/wolf-shoulder-realism-tattoo.jpg" },
   ]
 
   const inputStyle: React.CSSProperties = {
     width: "100%",
-    padding: "14px 16px",
-    borderRadius: 10,
-    border: "1px solid rgba(99,207,255,0.25)",
-    background: "#0d131a",
+    padding: "15px 16px",
+    borderRadius: 12,
+    border: "1px solid rgba(127, 220, 255, 0.22)",
+    background: "rgba(6, 12, 18, 0.92)",
     color: "#f4f7fb",
     outline: "none",
     fontSize: "1rem",
@@ -83,36 +47,53 @@ export default function Home() {
   const labelStyle: React.CSSProperties = {
     display: "block",
     marginBottom: 8,
-    color: "#b8c7d6",
-    fontWeight: 700,
-    fontSize: "0.95rem",
+    color: "#c4d7e8",
+    fontWeight: 800,
+    fontSize: "0.92rem",
+    letterSpacing: 0.3,
   }
 
   const sectionTitleStyle: React.CSSProperties = {
-    fontSize: "clamp(2.6rem, 5vw, 4.6rem)",
-    lineHeight: 0.95,
-    margin: "0 0 16px",
+    fontSize: "clamp(2.7rem, 5.8vw, 5.6rem)",
+    lineHeight: 0.9,
+    margin: "0 0 20px",
     textTransform: "uppercase",
-    fontWeight: 900,
-    letterSpacing: -1,
+    fontWeight: 950,
+    letterSpacing: -2,
   }
 
-  const cardStyle = (blue: boolean): React.CSSProperties => ({
-    background: blue
-      ? "linear-gradient(135deg, rgba(99,207,255,0.18), rgba(10,18,28,0.96) 38%, #090d12 100%)"
-      : "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(10,18,28,0.96) 35%, #090c10 100%)",
-    border: "1px solid rgba(99,207,255,0.16)",
-    boxShadow:
-      "inset 0 1px 0 rgba(255,255,255,0.03), 0 0 0 1px rgba(0,0,0,0.12)",
-  })
+  const buttonPrimary: React.CSSProperties = {
+    display: "inline-block",
+    padding: "15px 24px",
+    background: "#7fdcff",
+    color: "#06101a",
+    textDecoration: "none",
+    borderRadius: 12,
+    fontWeight: 950,
+    border: "none",
+    cursor: "pointer",
+    boxShadow: "0 0 28px rgba(127, 220, 255, 0.18)",
+  }
+
+  const buttonGhost: React.CSSProperties = {
+    display: "inline-block",
+    padding: "15px 24px",
+    color: "#f4f7fb",
+    textDecoration: "none",
+    borderRadius: 12,
+    fontWeight: 850,
+    border: "1px solid rgba(127, 220, 255, 0.25)",
+    background: "rgba(127, 220, 255, 0.05)",
+  }
 
   return (
     <main
       style={{
-        background: "#05070b",
+        background: "#04070b",
         color: "#f4f7fb",
         fontFamily: "Arial, Helvetica, sans-serif",
         minHeight: "100vh",
+        overflowX: "hidden",
       }}
     >
       <header
@@ -120,16 +101,16 @@ export default function Home() {
           position: "sticky",
           top: 0,
           zIndex: 50,
-          backdropFilter: "blur(12px)",
-          background: "rgba(5,7,11,0.82)",
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
+          backdropFilter: "blur(14px)",
+          background: "rgba(4, 7, 11, 0.86)",
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
         }}
       >
         <div
           style={{
             maxWidth: 1320,
             margin: "0 auto",
-            padding: "16px 20px",
+            padding: "14px 20px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -137,321 +118,170 @@ export default function Home() {
             flexWrap: "wrap",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <a
+            href="/"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 14,
+              textDecoration: "none",
+              color: "#f4f7fb",
+            }}
+          >
             <img
               src="/branding/blue_diamond_logo.png"
-              alt="Blue Diamond Tattoo Studio"
-              style={{
-                height: 54,
-                width: "auto",
-                display: "block",
-                objectFit: "contain",
-              }}
+              alt="Blue Diamond Tattoo Studio logo"
+              style={{ height: 52, width: "auto", objectFit: "contain" }}
             />
             <div>
               <p
                 style={{
                   margin: 0,
-                  fontWeight: 800,
+                  fontWeight: 950,
                   textTransform: "uppercase",
-                  letterSpacing: 1.6,
+                  letterSpacing: 1.4,
                   color: "#7fdcff",
                   fontSize: "0.78rem",
                 }}
               >
                 Blue Diamond Tattoo Studio
               </p>
-              <p
-                style={{
-                  margin: "4px 0 0",
-                  color: "#9cb2c6",
-                  fontSize: "0.9rem",
-                }}
-              >
-                Tattoos • Piercings • Paintings • Attleboro, MA
+              <p style={{ margin: "4px 0 0", color: "#9fb3c6", fontSize: "0.9rem" }}>
+                4 Park St, Attleboro MA
               </p>
             </div>
-          </div>
+          </a>
 
-          <nav style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a
-              href="#gallery"
-              style={{
-                color: "#f4f7fb",
-                textDecoration: "none",
-                fontWeight: 700,
-                padding: "12px 18px",
-                borderRadius: 10,
-                border: "1px solid rgba(99,207,255,0.22)",
-                background: "rgba(99,207,255,0.05)",
-              }}
-            >
-              Portfolio
-            </a>
-            <a
-              href="#about"
-              style={{
-                color: "#f4f7fb",
-                textDecoration: "none",
-                fontWeight: 700,
-                padding: "12px 18px",
-                borderRadius: 10,
-                border: "1px solid rgba(99,207,255,0.22)",
-                background: "rgba(99,207,255,0.05)",
-              }}
-            >
-              About
-            </a>
-            <a
-              href="#book"
-              style={{
-                color: "#07111b",
-                textDecoration: "none",
-                fontWeight: 800,
-                padding: "12px 18px",
-                borderRadius: 10,
-                background: "#7fdcff",
-                boxShadow: "0 0 20px rgba(127,220,255,0.18)",
-              }}
-            >
-              Schedule Appointment
-            </a>
+          <nav style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
+            <a href="#work" style={buttonGhost}>Work</a>
+            <a href="#artist" style={buttonGhost}>Artist</a>
+            <a href="#book" style={buttonPrimary}>Book Now</a>
           </nav>
         </div>
       </header>
 
       <section
         style={{
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
           background:
-            "linear-gradient(90deg, rgba(99,207,255,0.18), rgba(99,207,255,0.05))",
-          borderBottom: "1px solid rgba(99,207,255,0.16)",
+            "radial-gradient(circle at 12% 0%, rgba(127, 220, 255, 0.24), rgba(0,0,0,0) 34%), radial-gradient(circle at 86% 12%, rgba(24, 91, 154, 0.22), rgba(0,0,0,0) 28%), linear-gradient(180deg, #08121d 0%, #04070b 100%)",
         }}
       >
         <div
           style={{
             maxWidth: 1320,
             margin: "0 auto",
-            padding: "12px 20px",
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 16,
-            flexWrap: "wrap",
-            color: "#d8ecf6",
-            fontSize: "0.92rem",
-            fontWeight: 600,
+            padding: "70px 20px 84px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: 40,
+            alignItems: "center",
           }}
         >
-          <span>Attleboro, MA</span>
-          <span>Walk-Ins Welcome</span>
-          <span>Call Now: (508) 455-1948</span>
-        </div>
-      </section>
-
-      <section
-        style={{
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
-          background:
-            "radial-gradient(circle at top left, rgba(99,207,255,0.20), rgba(0,0,0,0) 28%), radial-gradient(circle at bottom right, rgba(29,95,157,0.16), rgba(0,0,0,0) 22%), linear-gradient(180deg, #07111b 0%, #05070b 100%)",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: 1320,
-            margin: "0 auto",
-            padding: "42px 20px 76px",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: 34,
-              alignItems: "center",
-            }}
-          >
-            <div>
-              <p
-                style={{
-                  color: "#7fdcff",
-                  letterSpacing: 2,
-                  fontWeight: 800,
-                  marginBottom: 16,
-                  fontSize: "0.9rem",
-                  textTransform: "uppercase",
-                }}
-              >
-                Blue Diamond Tattoo Studio • Attleboro, MA
-              </p>
-
-              <h1
-                style={{
-                  fontSize: "clamp(3.4rem, 8vw, 7rem)",
-                  lineHeight: 0.9,
-                  margin: "0 0 24px",
-                  fontWeight: 900,
-                  letterSpacing: -3,
-                  textTransform: "uppercase",
-                }}
-              >
-                Blue
-                <br />
-                Diamond.
-                <br />
-                Real Ink.
-                <br />
-                Real Art.
-              </h1>
-
-              <p
-                style={{
-                  maxWidth: 680,
-                  fontSize: "1.08rem",
-                  lineHeight: 1.8,
-                  color: "#b7c7d5",
-                  marginBottom: 32,
-                }}
-              >
-                If you want clean work, custom pieces, and a shop that really
-                cares about the art, pull up to Blue Diamond. Tattoos,
-                piercings, paintings, and custom work — all in one place.
-              </p>
-
-              <div
-                style={{
-                  display: "flex",
-                  gap: 14,
-                  flexWrap: "wrap",
-                  marginBottom: 18,
-                }}
-              >
-                <a
-                  href="#book"
-                  style={{
-                    display: "inline-block",
-                    padding: "16px 28px",
-                    background: "#7fdcff",
-                    color: "#07111b",
-                    textDecoration: "none",
-                    borderRadius: 10,
-                    fontWeight: 900,
-                    boxShadow: "0 0 22px rgba(127,220,255,0.18)",
-                  }}
-                >
-                  Schedule Appointment
-                </a>
-
-                <a
-                  href="#gallery"
-                  style={{
-                    display: "inline-block",
-                    padding: "16px 28px",
-                    border: "1px solid rgba(99,207,255,0.26)",
-                    color: "#f4f7fb",
-                    textDecoration: "none",
-                    borderRadius: 10,
-                    fontWeight: 800,
-                    background: "rgba(99,207,255,0.04)",
-                  }}
-                >
-                  View Work
-                </a>
-
-                <a
-                  href="https://www.instagram.com/bluediamond.tattoo_studio?igsh=MXVkNzdpN3d5Znh6Zg=="
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    display: "inline-block",
-                    padding: "16px 28px",
-                    border: "1px solid rgba(99,207,255,0.26)",
-                    color: "#f4f7fb",
-                    textDecoration: "none",
-                    borderRadius: 10,
-                    fontWeight: 800,
-                    background: "rgba(99,207,255,0.04)",
-                  }}
-                >
-                  Instagram
-                </a>
-              </div>
-
-              <p style={{ color: "#8ea3b7", fontSize: "0.95rem", margin: 0 }}>
-                Walk-ins welcome • Appointments recommended • Open until 9 PM
-              </p>
-            </div>
-
-            <div
+          <div>
+            <p
               style={{
-                minHeight: 340,
-                borderRadius: 24,
-                ...cardStyle(true),
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: 30,
+                color: "#7fdcff",
+                letterSpacing: 2.4,
+                fontWeight: 950,
+                marginBottom: 18,
+                fontSize: "0.86rem",
+                textTransform: "uppercase",
               }}
             >
-              <img
-                src="/branding/blue_diamond_logo.png"
-                alt="Blue Diamond Tattoo Studio logo"
-                style={{
-                  width: "100%",
-                  maxWidth: 520,
-                  height: "auto",
-                  display: "block",
-                  objectFit: "contain",
-                }}
-              />
+              Tattoo studio in Attleboro Massachusetts
+            </p>
+
+            <h1
+              style={{
+                fontSize: "clamp(4rem, 9vw, 8.2rem)",
+                lineHeight: 0.86,
+                margin: "0 0 26px",
+                fontWeight: 950,
+                letterSpacing: -4,
+                textTransform: "uppercase",
+              }}
+            >
+              Real Ink.
+              <br />
+              Real Art.
+              <br />
+              Blue Diamond.
+            </h1>
+
+            <p
+              style={{
+                maxWidth: 660,
+                fontSize: "1.08rem",
+                lineHeight: 1.85,
+                color: "#bfd1df",
+                marginBottom: 30,
+              }}
+            >
+              Custom tattoos, realism, black and grey work, piercing, paintings, and original art in Attleboro MA. Built for people who want the piece to feel personal, clean, and worth wearing.
+            </p>
+
+            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 20 }}>
+              <a href="#book" style={buttonPrimary}>Schedule Appointment</a>
+              <a href="#work" style={buttonGhost}>View Portfolio</a>
+              <a
+                href="tel:15084551948"
+                style={buttonGhost}
+              >
+                Call Studio
+              </a>
             </div>
+
+            <p style={{ color: "#8ea3b7", fontSize: "0.95rem", margin: 0 }}>
+              Walk ins welcome. Appointments recommended. Call (508) 455 1948.
+            </p>
+          </div>
+
+          <div
+            style={{
+              borderRadius: 28,
+              minHeight: 420,
+              background:
+                "linear-gradient(135deg, rgba(127,220,255,0.20), rgba(8,18,29,0.94) 42%, #05080d 100%)",
+              border: "1px solid rgba(127, 220, 255, 0.19)",
+              boxShadow: "0 28px 90px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.04)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 32,
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                inset: 18,
+                border: "1px solid rgba(127, 220, 255, 0.12)",
+                borderRadius: 22,
+              }}
+            />
+            <img
+              src="/branding/blue_diamond_logo.png"
+              alt="Blue Diamond Tattoo Studio"
+              style={{
+                width: "100%",
+                maxWidth: 500,
+                height: "auto",
+                display: "block",
+                position: "relative",
+                zIndex: 2,
+              }}
+            />
           </div>
         </div>
       </section>
 
-      <section style={{ borderBottom: "1px solid rgba(99,207,255,0.12)" }}>
-        <div
-          style={{
-            maxWidth: 1320,
-            margin: "0 auto",
-            padding: "22px 20px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 14,
-          }}
-        >
-          {[
-            "Walk-Ins Welcome",
-            "Open Until 9 PM",
-            "Custom Work",
-            "Piercings + Art",
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                background: "linear-gradient(180deg, #09111a 0%, #060b11 100%)",
-                border: "1px solid rgba(99,207,255,0.16)",
-                borderRadius: 14,
-                padding: "18px 14px",
-                textAlign: "center",
-                fontWeight: 900,
-                textTransform: "uppercase",
-                letterSpacing: 0.6,
-                color: "#f4f7fb",
-                fontSize: "0.92rem",
-                boxShadow:
-                  "inset 0 1px 0 rgba(255,255,255,0.03), 0 0 0 1px rgba(0,0,0,0.2)",
-              }}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section
-        id="about"
+        id="artist"
         style={{
           padding: "96px 20px",
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
         }}
       >
         <div
@@ -460,24 +290,24 @@ export default function Home() {
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 34,
+            gap: 38,
             alignItems: "center",
           }}
         >
           <div
             style={{
-              minHeight: 500,
-              borderRadius: 24,
-              ...cardStyle(false),
+              minHeight: 530,
+              borderRadius: 28,
               overflow: "hidden",
               position: "relative",
-              display: "flex",
-              alignItems: "flex-end",
+              border: "1px solid rgba(127, 220, 255, 0.16)",
+              background: "#08111a",
+              boxShadow: "0 24px 70px rgba(0,0,0,0.32)",
             }}
           >
             <img
               src="/diego/diego-tattoo-artist-working.jpg"
-              alt="Diego owner and artist at Blue Diamond Tattoo Studio"
+              alt="Diego tattoo artist working at Blue Diamond Tattoo Studio"
               style={{
                 position: "absolute",
                 inset: 0,
@@ -486,49 +316,38 @@ export default function Home() {
                 objectFit: "cover",
               }}
             />
-
             <div
               style={{
                 position: "absolute",
                 inset: 0,
                 background:
-                  "linear-gradient(180deg, rgba(4,7,11,0.06) 0%, rgba(4,7,11,0.35) 45%, rgba(4,7,11,0.92) 100%)",
+                  "linear-gradient(180deg, rgba(4,7,11,0.03) 0%, rgba(4,7,11,0.28) 42%, rgba(4,7,11,0.92) 100%)",
               }}
             />
-
-            <div
-              style={{
-                position: "relative",
-                zIndex: 2,
-                padding: 28,
-              }}
-            >
+            <div style={{ position: "absolute", left: 26, right: 26, bottom: 26 }}>
               <p
                 style={{
                   margin: "0 0 8px",
                   color: "#7fdcff",
                   textTransform: "uppercase",
                   letterSpacing: 2,
-                  fontWeight: 800,
-                  fontSize: "0.8rem",
+                  fontWeight: 950,
+                  fontSize: "0.78rem",
                 }}
               >
-                Owner • Artist
+                Owner and artist
               </p>
-              <h3
+              <h2
                 style={{
-                  margin: "0 0 10px",
-                  fontSize: "2.2rem",
-                  lineHeight: 1,
+                  margin: 0,
+                  fontSize: "clamp(2.4rem, 5vw, 4.4rem)",
+                  lineHeight: 0.92,
                   textTransform: "uppercase",
+                  fontWeight: 950,
                 }}
               >
                 Diego
-              </h3>
-              <p style={{ margin: 0, color: "#b3c6d6", lineHeight: 1.7 }}>
-                Tattoos, paintings, black & grey, custom ideas, and real love
-                for art.
-              </p>
+              </h2>
             </div>
           </div>
 
@@ -536,75 +355,38 @@ export default function Home() {
             <p
               style={{
                 color: "#7fdcff",
-                fontWeight: 800,
+                fontWeight: 950,
                 textTransform: "uppercase",
-                letterSpacing: 2,
-                marginBottom: 10,
+                letterSpacing: 2.2,
+                marginBottom: 12,
               }}
             >
-              Meet Diego
+              Custom tattoo work with an artist first approach
             </p>
 
             <h2 style={sectionTitleStyle}>
-              Art first.
+              Clean work.
               <br />
-              Always.
+              Real presence.
             </h2>
 
-            <p
-              style={{
-                color: "#b7c7d5",
-                lineHeight: 1.85,
-                maxWidth: 620,
-                marginBottom: 18,
-              }}
-            >
-              Diego is the owner of Blue Diamond and an artist who brings that
-              same love for art into everything he does — from tattoos to
-              paintings to custom pieces made with real attention and care.
+            <p style={{ color: "#bfd1df", lineHeight: 1.85, maxWidth: 650, marginBottom: 18 }}>
+              Blue Diamond is built around art, patience, and work that carries weight. Bring a reference, a story, a symbol, or a rough idea. The studio helps shape it into a piece that fits the body and the person wearing it.
             </p>
 
-            <p
-              style={{
-                color: "#b7c7d5",
-                lineHeight: 1.85,
-                maxWidth: 620,
-                marginBottom: 30,
-              }}
-            >
-              If you’ve got an idea, bring it in. If you want something custom,
-              let’s talk about it and build it the right way.
+            <p style={{ color: "#bfd1df", lineHeight: 1.85, maxWidth: 650, marginBottom: 28 }}>
+              The shop works with realism, black and grey, portraits, custom designs, cover ups, piercing, paintings, and visual art.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
+              <a href="#book" style={buttonPrimary}>Start Your Request</a>
               <a
-                href="#gallery"
-                style={{
-                  display: "inline-block",
-                  padding: "16px 28px",
-                  background: "#7fdcff",
-                  color: "#07111b",
-                  textDecoration: "none",
-                  borderRadius: 10,
-                  fontWeight: 900,
-                }}
+                href="https://www.instagram.com/bluediamond.tattoo_studio"
+                target="_blank"
+                rel="noreferrer"
+                style={buttonGhost}
               >
-                View the Work
-              </a>
-
-              <a
-                href="#book"
-                style={{
-                  display: "inline-block",
-                  padding: "16px 28px",
-                  border: "1px solid rgba(99,207,255,0.26)",
-                  color: "#f4f7fb",
-                  textDecoration: "none",
-                  borderRadius: 10,
-                  fontWeight: 800,
-                }}
-              >
-                Schedule Appointment
+                View Instagram
               </a>
             </div>
           </div>
@@ -613,50 +395,57 @@ export default function Home() {
 
       <section
         style={{
-          padding: "96px 20px",
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
+          padding: "90px 20px",
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
+          background:
+            "linear-gradient(180deg, rgba(127, 220, 255, 0.035), rgba(0,0,0,0))",
         }}
       >
         <div style={{ maxWidth: 1320, margin: "0 auto" }}>
-          <h2 style={sectionTitleStyle}>
-            Tattoos. Piercings.
-            <br />
-            Art on every level.
-          </h2>
-
           <p
             style={{
-              color: "#b7c7d5",
-              maxWidth: 760,
-              lineHeight: 1.8,
-              marginBottom: 34,
+              color: "#7fdcff",
+              fontWeight: 950,
+              textTransform: "uppercase",
+              letterSpacing: 2.2,
+              marginBottom: 12,
             }}
           >
-            Bring your idea, your reference, or come in with nothing but a
-            concept.
+            Services
           </p>
+
+          <h2 style={sectionTitleStyle}>
+            Tattoos.
+            <br />
+            Piercing.
+            <br />
+            Original art.
+          </h2>
 
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))",
-              gap: 18,
+              gap: 16,
+              marginTop: 34,
             }}
           >
             {services.map((service) => (
               <div
                 key={service}
                 style={{
-                  background: "rgba(127,220,255,0.04)",
-                  border: "1px solid rgba(99,207,255,0.16)",
-                  borderRadius: 18,
+                  minHeight: 142,
                   padding: 22,
-                  minHeight: 132,
+                  borderRadius: 20,
+                  border: "1px solid rgba(127, 220, 255, 0.16)",
+                  background:
+                    "linear-gradient(135deg, rgba(127,220,255,0.08), rgba(8,14,21,0.94) 45%, #05080d 100%)",
                   display: "flex",
                   alignItems: "flex-end",
-                  fontWeight: 800,
+                  fontWeight: 950,
                   textTransform: "uppercase",
-                  lineHeight: 1.2,
+                  lineHeight: 1.05,
+                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.035)",
                 }}
               >
                 {service}
@@ -667,48 +456,55 @@ export default function Home() {
       </section>
 
       <section
-        id="gallery"
+        id="work"
         style={{
           padding: "96px 20px",
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
         }}
       >
         <div style={{ maxWidth: 1320, margin: "0 auto" }}>
-          <h2 style={sectionTitleStyle}>Work from the shop.</h2>
-
           <p
             style={{
-              color: "#b7c7d5",
-              maxWidth: 760,
-              lineHeight: 1.8,
-              marginBottom: 34,
+              color: "#7fdcff",
+              fontWeight: 950,
+              textTransform: "uppercase",
+              letterSpacing: 2.2,
+              marginBottom: 12,
             }}
           >
-            Real tattoos. Different pieces. Different energies. All done at Blue
-            Diamond.
+            Portfolio
+          </p>
+
+          <h2 style={sectionTitleStyle}>Work from the shop.</h2>
+
+          <p style={{ color: "#bfd1df", maxWidth: 760, lineHeight: 1.8, marginBottom: 34 }}>
+            Real tattoos from Blue Diamond Tattoo Studio. Every piece has its own energy, placement, and story.
           </p>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gap: 20,
+              gridTemplateColumns: "repeat(auto-fit, minmax(245px, 1fr))",
+              gap: 18,
             }}
           >
-            {gallery.map((item, index) => (
-              <div
+            {gallery.map((item) => (
+              <article
                 key={item.title}
                 style={{
-                  borderRadius: 18,
+                  minHeight: 355,
+                  borderRadius: 22,
                   overflow: "hidden",
-                  ...cardStyle(index % 2 === 0),
                   position: "relative",
-                  minHeight: 340,
+                  border: "1px solid rgba(127, 220, 255, 0.14)",
+                  background: "#08111a",
+                  boxShadow: "0 18px 42px rgba(0,0,0,0.28)",
                 }}
               >
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} tattoo at Blue Diamond Tattoo Studio`}
+                  loading="lazy"
                   style={{
                     position: "absolute",
                     inset: 0,
@@ -717,53 +513,47 @@ export default function Home() {
                     objectFit: "cover",
                   }}
                 />
-
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
                     background:
-                      "linear-gradient(180deg, rgba(4,7,11,0.10) 0%, rgba(4,7,11,0.18) 30%, rgba(4,7,11,0.88) 100%)",
+                      "linear-gradient(180deg, rgba(4,7,11,0.04) 0%, rgba(4,7,11,0.12) 42%, rgba(4,7,11,0.86) 100%)",
                   }}
                 />
-
                 <div
                   style={{
-                    position: "relative",
-                    zIndex: 2,
-                    height: 340,
-                    padding: 22,
-                    display: "flex",
-                    alignItems: "flex-end",
+                    position: "absolute",
+                    left: 20,
+                    right: 20,
+                    bottom: 20,
                   }}
                 >
-                  <div>
-                    <p
-                      style={{
-                        margin: "0 0 8px",
-                        color: "#7fdcff",
-                        textTransform: "uppercase",
-                        letterSpacing: 2,
-                        fontWeight: 800,
-                        fontSize: "0.78rem",
-                      }}
-                    >
-                      Portfolio
-                    </p>
-                    <h3
-                      style={{
-                        margin: 0,
-                        fontWeight: 900,
-                        textTransform: "uppercase",
-                        lineHeight: 1,
-                        fontSize: "1.5rem",
-                      }}
-                    >
-                      {item.title}
-                    </h3>
-                  </div>
+                  <p
+                    style={{
+                      margin: "0 0 7px",
+                      color: "#7fdcff",
+                      textTransform: "uppercase",
+                      letterSpacing: 2,
+                      fontWeight: 950,
+                      fontSize: "0.72rem",
+                    }}
+                  >
+                    Blue Diamond work
+                  </p>
+                  <h3
+                    style={{
+                      margin: 0,
+                      fontWeight: 950,
+                      textTransform: "uppercase",
+                      lineHeight: 1,
+                      fontSize: "1.35rem",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -773,100 +563,78 @@ export default function Home() {
         id="book"
         style={{
           padding: "96px 20px",
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
           background:
-            "radial-gradient(circle at top, rgba(127,220,255,0.10), rgba(0,0,0,0) 45%)",
+            "radial-gradient(circle at top, rgba(127,220,255,0.13), rgba(0,0,0,0) 44%)",
         }}
       >
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p
-            style={{
-              color: "#7fdcff",
-              fontWeight: 800,
-              textTransform: "uppercase",
-              letterSpacing: 2,
-              marginBottom: 10,
-              textAlign: "center",
-            }}
-          >
-            Schedule Appointment
-          </p>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 34 }}>
+            <p
+              style={{
+                color: "#7fdcff",
+                fontWeight: 950,
+                textTransform: "uppercase",
+                letterSpacing: 2.2,
+                marginBottom: 12,
+              }}
+            >
+              Appointment request
+            </p>
 
-          <h2
-            style={{
-              ...sectionTitleStyle,
-              textAlign: "center",
-            }}
-          >
-            Bring your idea in.
-          </h2>
+            <h2 style={{ ...sectionTitleStyle, textAlign: "center" }}>
+              Tell us what you want.
+            </h2>
 
-          <p
-            style={{
-              color: "#b7c7d5",
-              lineHeight: 1.8,
-              maxWidth: 760,
-              margin: "0 auto 34px",
-              textAlign: "center",
-            }}
-          >
-            Fill this out, send your references, and let the shop know what
-            you’re trying to get done.
-          </p>
+            <p
+              style={{
+                color: "#bfd1df",
+                lineHeight: 1.8,
+                maxWidth: 760,
+                margin: "0 auto",
+              }}
+            >
+              Send the idea, placement, size, and budget. The studio will review the request and reach out.
+            </p>
+          </div>
 
           <form
             action="https://formsubmit.co/Bluediamondtattoo617@gmail.com"
             method="POST"
-            encType="multipart/form-data"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
               gap: 20,
-              background: "rgba(127,220,255,0.03)",
-              border: "1px solid rgba(99,207,255,0.18)",
-              borderRadius: 20,
-              padding: 24,
+              background:
+                "linear-gradient(135deg, rgba(127,220,255,0.07), rgba(6,12,18,0.96) 42%, #05080d 100%)",
+              border: "1px solid rgba(127, 220, 255, 0.19)",
+              borderRadius: 26,
+              padding: 26,
+              boxShadow: "0 24px 80px rgba(0,0,0,0.34)",
             }}
           >
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Tattoo Booking Request"
-            />
+            <input type="hidden" name="_subject" value="New Tattoo Booking Request" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="http://localhost:3000/" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://bluediamondtattoostudio.com/thank-you"
+            />
 
             <div>
               <label style={labelStyle}>Name</label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your name"
-                style={inputStyle}
-                required
-              />
+              <input type="text" name="name" placeholder="Your name" style={inputStyle} required />
             </div>
 
             <div>
               <label style={labelStyle}>Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                style={inputStyle}
-                required
-              />
+              <input type="email" name="email" placeholder="Your email" style={inputStyle} required />
             </div>
 
             <div>
               <label style={labelStyle}>Phone</label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Your phone number"
-                style={inputStyle}
-              />
+              <input type="tel" name="phone" placeholder="Your phone number" style={inputStyle} />
             </div>
 
             <div>
@@ -877,120 +645,42 @@ export default function Home() {
             <div>
               <label style={labelStyle}>Service</label>
               <select name="service" style={inputStyle} defaultValue="">
-                <option value="" disabled>
-                  Choose service
-                </option>
+                <option value="" disabled>Choose service</option>
                 <option value="Tattoo with Diego">Tattoo with Diego</option>
                 <option value="Piercing">Piercing</option>
                 <option value="Consultation">Consultation</option>
                 <option value="Custom Design">Custom Design</option>
+                <option value="Cover Up">Cover Up</option>
               </select>
             </div>
 
             <div>
               <label style={labelStyle}>Placement</label>
-              <input
-                type="text"
-                name="placement"
-                placeholder="Arm, hand, chest..."
-                style={inputStyle}
-              />
+              <input type="text" name="placement" placeholder="Arm, hand, chest" style={inputStyle} />
             </div>
 
             <div>
               <label style={labelStyle}>Approximate Size</label>
-              <input
-                type="text"
-                name="size"
-                placeholder="Small, medium, sleeve..."
-                style={inputStyle}
-              />
+              <input type="text" name="size" placeholder="Small, medium, sleeve" style={inputStyle} />
             </div>
 
             <div>
               <label style={labelStyle}>Budget</label>
-              <input
-                type="text"
-                name="budget"
-                placeholder="Your budget"
-                style={inputStyle}
-              />
+              <input type="text" name="budget" placeholder="Your budget" style={inputStyle} />
             </div>
 
             <div style={{ gridColumn: "1 / -1" }}>
               <label style={labelStyle}>Tattoo Idea</label>
               <textarea
                 name="idea"
-                placeholder="Tell the shop what you want to get done..."
-                style={{ ...inputStyle, minHeight: 140, resize: "vertical" }}
+                placeholder="Tell the shop what you want, where you want it, and any details that matter."
+                style={{ ...inputStyle, minHeight: 150, resize: "vertical" }}
+                required
               />
             </div>
 
-            <div style={{ gridColumn: "1 / -1" }}>
-              <label style={labelStyle}>Upload References</label>
-
-              <label
-                htmlFor="reference-upload"
-                style={{
-                  display: "inline-block",
-                  padding: "14px 20px",
-                  borderRadius: 10,
-                  border: "1px solid rgba(99,207,255,0.25)",
-                  background: "rgba(127,220,255,0.06)",
-                  color: "#f4f7fb",
-                  fontWeight: 800,
-                  cursor: "pointer",
-                  marginBottom: 12,
-                }}
-              >
-                Choose Reference Images
-              </label>
-
-              <input
-                id="reference-upload"
-                type="file"
-                name="attachment"
-                multiple
-                accept="image/*"
-                style={{
-                  display: "block",
-                  color: "#b8c7d6",
-                  fontSize: "0.95rem",
-                }}
-              />
-
-              <p
-                style={{
-                  margin: "10px 0 0",
-                  color: "#8ea3b7",
-                  fontSize: "0.9rem",
-                }}
-              >
-                Please upload up to 3 clear reference images.
-              </p>
-            </div>
-
-            <div
-              style={{
-                gridColumn: "1 / -1",
-                textAlign: "center",
-                marginTop: 10,
-              }}
-            >
-              <button
-                type="submit"
-                style={{
-                  padding: "16px 30px",
-                  borderRadius: 10,
-                  border: "none",
-                  background: "#7fdcff",
-                  color: "#07111b",
-                  fontWeight: 900,
-                  fontSize: "1rem",
-                  cursor: "pointer",
-                  boxShadow: "0 0 22px rgba(127,220,255,0.16)",
-                }}
-              >
+            <div style={{ gridColumn: "1 / -1", textAlign: "center", marginTop: 8 }}>
+              <button type="submit" style={{ ...buttonPrimary, fontSize: "1rem" }}>
                 Send Appointment Request
               </button>
             </div>
@@ -1004,7 +694,7 @@ export default function Home() {
                 fontSize: "0.92rem",
               }}
             >
-              Booking email: Bluediamondtattoo617@gmail.com
+              After sending, you will be taken to a confirmation page.
             </p>
           </form>
         </div>
@@ -1012,10 +702,64 @@ export default function Home() {
 
       <section
         style={{
-          padding: "36px 20px",
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
+          padding: "86px 20px",
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
+        }}
+      >
+        <div style={{ maxWidth: 1320, margin: "0 auto" }}>
+          <p
+            style={{
+              color: "#7fdcff",
+              fontWeight: 950,
+              textTransform: "uppercase",
+              letterSpacing: 2.2,
+              marginBottom: 12,
+            }}
+          >
+            Local tattoo studio
+          </p>
+
+          <h2 style={sectionTitleStyle}>
+            Serving Attleboro
+            <br />
+            and nearby cities.
+          </h2>
+
+          <p style={{ color: "#bfd1df", maxWidth: 780, lineHeight: 1.8, marginBottom: 26 }}>
+            Blue Diamond Tattoo Studio is located at 4 Park St in Attleboro MA. The studio serves clients from Attleboro, North Attleborough, Mansfield, Taunton, Pawtucket, Providence, Boston, and surrounding Massachusetts and Rhode Island areas.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+              gap: 14,
+            }}
+          >
+            {["Attleboro MA", "North Attleborough MA", "Mansfield MA", "Taunton MA", "Pawtucket RI", "Providence RI", "Boston MA", "Rhode Island area"].map((city) => (
+              <div
+                key={city}
+                style={{
+                  padding: "18px 16px",
+                  borderRadius: 18,
+                  border: "1px solid rgba(127, 220, 255, 0.15)",
+                  background: "rgba(127, 220, 255, 0.045)",
+                  color: "#d9e9f4",
+                  fontWeight: 850,
+                }}
+              >
+                {city}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        style={{
+          padding: "44px 20px",
           background:
-            "linear-gradient(90deg, rgba(127,220,255,0.22), rgba(29,95,157,0.12))",
+            "linear-gradient(90deg, rgba(127,220,255,0.22), rgba(24,91,154,0.13))",
         }}
       >
         <div
@@ -1033,16 +777,16 @@ export default function Home() {
             <p
               style={{
                 margin: "0 0 6px",
-                color: "#07111b",
-                fontWeight: 900,
+                color: "#06101a",
+                fontWeight: 950,
                 textTransform: "uppercase",
                 letterSpacing: 2,
               }}
             >
-              Sunday Piercing Deal
+              Sunday piercing special
             </p>
-            <p style={{ margin: 0, color: "#0a2233", fontWeight: 700 }}>
-              Buy one piercing, get one $30 off on Sundays.
+            <p style={{ margin: 0, color: "#092236", fontWeight: 750 }}>
+              Buy one piercing and get one piercing thirty dollars off on Sundays.
             </p>
           </div>
 
@@ -1050,12 +794,12 @@ export default function Home() {
             href="tel:15084551948"
             style={{
               display: "inline-block",
-              padding: "14px 24px",
-              background: "#07111b",
+              padding: "14px 22px",
+              background: "#06101a",
               color: "#f4f7fb",
               textDecoration: "none",
-              borderRadius: 10,
-              fontWeight: 900,
+              borderRadius: 12,
+              fontWeight: 950,
             }}
           >
             Call for Details
@@ -1065,113 +809,72 @@ export default function Home() {
 
       <section
         style={{
-          padding: "96px 20px",
-          borderBottom: "1px solid rgba(99,207,255,0.12)",
+          padding: "92px 20px",
+          borderBottom: "1px solid rgba(127, 220, 255, 0.13)",
+          textAlign: "center",
         }}
       >
-        <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <img
             src="/branding/blue_diamond_logo.png"
-            alt="Blue Diamond Tattoo Studio"
+            alt="Blue Diamond Tattoo Studio logo"
+            loading="lazy"
             style={{
-              height: 70,
+              height: 72,
               width: "auto",
               display: "block",
-              margin: "0 auto 18px",
+              margin: "0 auto 20px",
             }}
           />
 
           <p
             style={{
               color: "#7fdcff",
-              fontWeight: 800,
+              fontWeight: 950,
               textTransform: "uppercase",
-              letterSpacing: 2,
-              marginBottom: 10,
+              letterSpacing: 2.2,
+              marginBottom: 12,
             }}
           >
-            Ready to Get Tattooed?
+            Ready to get tattooed
           </p>
 
-          <h2 style={sectionTitleStyle}>Pull up to Blue Diamond.</h2>
+          <h2 style={{ ...sectionTitleStyle, textAlign: "center" }}>
+            Pull up to Blue Diamond.
+          </h2>
 
           <p
             style={{
-              color: "#b7c7d5",
+              color: "#bfd1df",
               lineHeight: 1.85,
               maxWidth: 760,
               margin: "0 auto 28px",
             }}
           >
-            Call the shop, stop by, or come in with your idea and let’s talk
-            about it.
+            Call the studio, send a booking request, or visit the shop with your idea.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              gap: 14,
-              justifyContent: "center",
-              flexWrap: "wrap",
-              marginBottom: 24,
-            }}
-          >
-            <a
-              href="tel:15084551948"
-              style={{
-                display: "inline-block",
-                padding: "16px 28px",
-                background: "#7fdcff",
-                color: "#07111b",
-                textDecoration: "none",
-                borderRadius: 10,
-                fontWeight: 900,
-              }}
-            >
-              Call the Studio
-            </a>
-
+          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="tel:15084551948" style={buttonPrimary}>Call Studio</a>
             <a
               href="https://maps.google.com/?q=4+Park+St+Attleboro+MA+02703"
-              style={{
-                display: "inline-block",
-                padding: "16px 28px",
-                border: "1px solid rgba(99,207,255,0.26)",
-                color: "#f4f7fb",
-                textDecoration: "none",
-                borderRadius: 10,
-                fontWeight: 800,
-              }}
+              style={buttonGhost}
             >
               Get Directions
             </a>
-
             <a
-              href="https://www.instagram.com/bluediamond.tattoo_studio?igsh=MXVkNzdpN3d5Znh6Zg=="
+              href="https://www.instagram.com/bluediamond.tattoo_studio"
               target="_blank"
               rel="noreferrer"
-              style={{
-                display: "inline-block",
-                padding: "16px 28px",
-                border: "1px solid rgba(99,207,255,0.26)",
-                color: "#f4f7fb",
-                textDecoration: "none",
-                borderRadius: 10,
-                fontWeight: 800,
-              }}
+              style={buttonGhost}
             >
               Instagram
             </a>
           </div>
-
-          <p style={{ color: "#8ea3b7", margin: 0 }}>
-            4 Park St, Attleboro, MA 02703 • (508) 455-1948 •
-            Bluediamondtattoo617@gmail.com
-          </p>
         </div>
       </section>
 
-      <footer style={{ padding: "34px 20px", background: "#040609" }}>
+      <footer style={{ padding: "34px 20px", background: "#030509" }}>
         <div
           style={{
             maxWidth: 1320,
@@ -1185,8 +888,8 @@ export default function Home() {
           }}
         >
           <span>Blue Diamond Tattoo Studio</span>
-          <span>4 Park St, Attleboro, MA 02703</span>
-          <span>(508) 455-1948</span>
+          <span>4 Park St, Attleboro MA 02703</span>
+          <span>(508) 455 1948</span>
           <span>Bluediamondtattoo617@gmail.com</span>
         </div>
       </footer>
