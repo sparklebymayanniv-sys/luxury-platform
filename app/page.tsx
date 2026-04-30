@@ -25,12 +25,21 @@ export default function Home() {
 
         <div className="holding-actions">
           <a href="tel:15084551948">Call Studio</a>
+
           <a
             href="https://www.instagram.com/bluediamond.tattoo_studio"
             target="_blank"
             rel="noreferrer"
           >
             Instagram
+          </a>
+
+          <a
+            href="https://maps.google.com/?q=4+Park+St+Attleboro+MA+02703"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Get Directions
           </a>
         </div>
       </section>

@@ -24,9 +24,8 @@
 
 .holding-logo {
   height: 92px;
-  width: auto;
-  display: block;
   margin: 0 auto 26px;
+  display: block;
   opacity: 0;
   animation: inkReveal 1200ms ease forwards 200ms;
 }
@@ -47,7 +46,6 @@
   font-weight: 700;
   letter-spacing: 0.01em;
   margin: 0 0 26px;
-  color: #dbe7f0;
   opacity: 0;
   filter: blur(16px);
   transform: scale(0.98);
@@ -78,14 +76,16 @@
   border-radius: 999px;
   text-decoration: none;
   font-weight: 850;
-  color: #06101a;
   background: #7fdcff;
+  color: #06101a;
 }
 
-.holding-actions a:nth-child(2) {
-  color: #dbe7f0;
+/* Instagram + Directions */
+.holding-actions a:nth-child(2),
+.holding-actions a:nth-child(3) {
   background: rgba(127, 220, 255, 0.055);
   border: 1px solid rgba(127, 220, 255, 0.26);
+  color: #dbe7f0;
 }
 
 .ink-cloud {
