@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Script from "next/script"
+import "./globals.css"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bluediamondtattoostudio.com"),
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Blue Diamond Tattoo Studio in Attleboro MA offers custom tattoos, realism, black and grey tattoos, piercing, paintings, cover ups, and original artwork.",
+    "Blue Diamond Tattoo Studio in Attleboro MA offers tattoos, realism, black and grey work, piercing, paintings, cover ups, and original artwork.",
 
   keywords: [
     "Blue Diamond Tattoo Studio",
@@ -29,15 +30,15 @@ export const metadata: Metadata = {
   },
 
   icons: {
-     icon: "/favicon.ico",
-  shortcut: "/favicon.ico",
-  apple: "/apple-touch-icon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   openGraph: {
     title: "Blue Diamond Tattoo Studio | Attleboro MA",
     description:
-      "Custom tattoos, realism, black and grey work, piercing, paintings, and original artwork in Attleboro MA.",
+      "Tattoos, realism, black and grey work, piercing, paintings, and original artwork in Attleboro MA.",
     url: "https://bluediamondtattoostudio.com",
     siteName: "Blue Diamond Tattoo Studio",
     images: [
@@ -96,7 +97,7 @@ export default function RootLayout({
     ],
     sameAs: ["https://www.instagram.com/bluediamond.tattoo_studio"],
     makesOffer: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Tattoos" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tattoos" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Realism Tattoos" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Black and Grey Tattoos" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Portrait Tattoos" } },

@@ -1,26 +1,51 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background: #030508;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #030508;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes softOpen {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.softOpen {
+  opacity: 0;
+  animation: softOpen 900ms ease forwards;
+}
+
+.delayOne {
+  animation-delay: 120ms;
+}
+
+.delayTwo {
+  animation-delay: 260ms;
+}
+
+.delayThree {
+  animation-delay: 420ms;
+}
+
+.delayFour {
+  animation-delay: 600ms;
 }

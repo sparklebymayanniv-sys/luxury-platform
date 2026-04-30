@@ -3,63 +3,104 @@ export default function ThankYouPage() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#05070b",
-        color: "#f4f7fb",
+        background:
+          "radial-gradient(circle at 20% 10%, rgba(127,220,255,0.14), transparent 38%), #030508",
+        color: "#dbe7f0",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        padding: 20,
+        padding: 24,
+        fontFamily: "Arial, Helvetica, sans-serif",
       }}
     >
-      <div style={{ maxWidth: 600 }}>
+      <div style={{ maxWidth: 640 }}>
+        <img
+          src="/branding/blue_diamond_logo.png"
+          alt="Blue Diamond Tattoo Studio"
+          style={{
+            height: 86,
+            width: "auto",
+            display: "block",
+            margin: "0 auto 26px",
+          }}
+        />
+
         <p
           style={{
             textTransform: "uppercase",
-            letterSpacing: 2,
+            letterSpacing: 2.4,
             color: "#7fdcff",
             fontWeight: 800,
             marginBottom: 16,
           }}
         >
-          Request Sent
+          Request sent
         </p>
 
         <h1
           style={{
-            fontSize: "2.8rem",
-            fontWeight: 900,
-            marginBottom: 20,
+            fontSize: "clamp(2.8rem, 8vw, 5.2rem)",
+            lineHeight: 0.95,
+            fontWeight: 700,
+            letterSpacing: "0.01em",
+            margin: "0 0 24px",
           }}
         >
-          We got your request.
+          We got it.
         </h1>
 
         <p
           style={{
-            color: "#b7c7d5",
-            lineHeight: 1.7,
-            marginBottom: 30,
+            color: "#9fb3c8",
+            lineHeight: 1.8,
+            marginBottom: 32,
+            fontSize: "1.05rem",
           }}
         >
-          The shop will review your idea and reach out soon.  
-          If it’s urgent, feel free to call directly.
+          The shop will review your request and reach out. If it is urgent, call
+          the studio directly.
         </p>
 
-        <a
-          href="/"
+        <div
           style={{
-            display: "inline-block",
-            padding: "14px 26px",
-            background: "#7fdcff",
-            color: "#07111b",
-            borderRadius: 10,
-            textDecoration: "none",
-            fontWeight: 900,
+            display: "flex",
+            gap: 14,
+            justifyContent: "center",
+            flexWrap: "wrap",
           }}
         >
-          Back to Home
-        </a>
+          <a
+            href="/"
+            style={{
+              display: "inline-block",
+              padding: "14px 24px",
+              background: "#7fdcff",
+              color: "#06101a",
+              borderRadius: 999,
+              textDecoration: "none",
+              fontWeight: 850,
+            }}
+          >
+            Back Home
+          </a>
+
+          <a
+            href="tel:15084551948"
+            style={{
+              display: "inline-block",
+              padding: "14px 24px",
+              border: "1px solid rgba(127,220,255,0.26)",
+              color: "#dbe7f0",
+              borderRadius: 999,
+              textDecoration: "none",
+              fontWeight: 850,
+              background: "rgba(127,220,255,0.055)",
+            }}
+          >
+            Call Studio
+          </a>
+        </div>
       </div>
     </main>
   )

@@ -10,7 +10,7 @@ export default function Home() {
     "Realism",
     "Black and Grey",
     "Portrait Work",
-    "Custom Tattoos",
+    "Tattoos",
     "Cover Ups",
     "Piercing",
     "Paintings",
@@ -38,27 +38,26 @@ export default function Home() {
     borderRadius: 14,
     border: "1px solid rgba(127,220,255,0.24)",
     background: "rgba(4,10,16,0.94)",
-    color: "#f4f7fb",
+    color: "#dbe7f0",
     outline: "none",
     fontSize: "1rem",
-    boxSizing: "border-box",
   }
 
   const labelStyle: React.CSSProperties = {
     display: "block",
     marginBottom: 8,
-    color: "#c7d9e8",
-    fontWeight: 800,
+    color: "#b9cce0",
+    fontWeight: 700,
     fontSize: "0.92rem",
   }
 
   const sectionTitleStyle: React.CSSProperties = {
-    fontSize: "clamp(2.7rem, 5.8vw, 5.8rem)",
-    lineHeight: 0.88,
+    fontSize: "clamp(2.5rem, 5.6vw, 5.4rem)",
+    lineHeight: 0.98,
     margin: "0 0 20px",
-    textTransform: "uppercase",
-    fontWeight: 950,
-    letterSpacing: -2,
+    fontWeight: 700,
+    letterSpacing: "0.01em",
+    color: "#dbe7f0",
   }
 
   const buttonPrimary: React.CSSProperties = {
@@ -68,35 +67,35 @@ export default function Home() {
     color: "#06101a",
     textDecoration: "none",
     borderRadius: 999,
-    fontWeight: 950,
+    fontWeight: 850,
     border: "none",
     cursor: "pointer",
-    boxShadow: "0 0 30px rgba(127,220,255,0.22)",
+    boxShadow: "0 0 30px rgba(127,220,255,0.20)",
   }
 
   const buttonGhost: React.CSSProperties = {
     display: "inline-block",
     padding: "15px 24px",
-    color: "#f4f7fb",
+    color: "#dbe7f0",
     textDecoration: "none",
     borderRadius: 999,
-    fontWeight: 850,
-    border: "1px solid rgba(127,220,255,0.26)",
+    fontWeight: 750,
+    border: "1px solid rgba(127,220,255,0.25)",
     background: "rgba(127,220,255,0.055)",
   }
 
   const phoneLinkStyle: React.CSSProperties = {
     color: "#7fdcff",
     textDecoration: "none",
-    fontWeight: 850,
+    fontWeight: 800,
   }
 
   return (
     <main
       style={{
         background:
-          "radial-gradient(circle at 12% 0%, rgba(127,220,255,0.18), rgba(0,0,0,0) 32%), radial-gradient(circle at 86% 8%, rgba(28,93,160,0.15), rgba(0,0,0,0) 28%), #030508",
-        color: "#f4f7fb",
+          "radial-gradient(circle at 16% 0%, rgba(127,220,255,0.13), rgba(0,0,0,0) 34%), radial-gradient(circle at 86% 8%, rgba(35,96,160,0.13), rgba(0,0,0,0) 30%), #030508",
+        color: "#dbe7f0",
         fontFamily: "Arial, Helvetica, sans-serif",
         minHeight: "100vh",
         overflow: "visible",
@@ -132,7 +131,7 @@ export default function Home() {
               alignItems: "center",
               gap: 14,
               textDecoration: "none",
-              color: "#f4f7fb",
+              color: "#dbe7f0",
             }}
           >
             <img
@@ -144,16 +143,16 @@ export default function Home() {
               <p
                 style={{
                   margin: 0,
-                  fontWeight: 950,
+                  fontWeight: 850,
                   textTransform: "uppercase",
-                  letterSpacing: 1.6,
+                  letterSpacing: 1.5,
                   color: "#7fdcff",
                   fontSize: "0.78rem",
                 }}
               >
                 Blue Diamond Tattoo Studio
               </p>
-              <p style={{ margin: "4px 0 0", color: "#9fb3c6", fontSize: "0.9rem" }}>
+              <p style={{ margin: "4px 0 0", color: "#8fa7bb", fontSize: "0.9rem" }}>
                 Attleboro MA
               </p>
             </div>
@@ -179,7 +178,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(3,5,8,0.15), #030508 96%)",
+              "linear-gradient(180deg, rgba(3,5,8,0.10), #030508 96%)",
             pointerEvents: "none",
           }}
         />
@@ -196,12 +195,12 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          <div>
+          <div className="softOpen delayOne">
             <p
               style={{
                 color: "#7fdcff",
-                letterSpacing: 2.6,
-                fontWeight: 950,
+                letterSpacing: 2.3,
+                fontWeight: 800,
                 marginBottom: 18,
                 fontSize: "0.84rem",
                 textTransform: "uppercase",
@@ -212,29 +211,45 @@ export default function Home() {
 
             <h1
               style={{
-                fontSize: "clamp(4.1rem, 9vw, 8.4rem)",
-                lineHeight: 0.84,
-                margin: "0 0 28px",
-                fontWeight: 950,
-                letterSpacing: -4,
-                textTransform: "uppercase",
+                fontSize: "clamp(3.5rem, 8vw, 7.2rem)",
+                lineHeight: 1.02,
+                margin: "0 0 26px",
+                fontWeight: 700,
+                letterSpacing: "0.01em",
+                color: "#dbe7f0",
               }}
             >
-              Ink with
+              Real ink.
               <br />
-              presence.
+              No pressure.
             </h1>
 
             <p
               style={{
-                maxWidth: 650,
-                fontSize: "1.1rem",
-                lineHeight: 1.85,
-                color: "#c2d3e2",
+                maxWidth: 620,
+                fontSize: "1.16rem",
+                lineHeight: 1.75,
+                color: "#9fb3c8",
                 marginBottom: 30,
               }}
             >
-              Custom tattoos, realism, black and grey work, piercing, paintings, and original art. Blue Diamond is for people who want the piece to feel personal, clean, and worth wearing.
+              Bring what you want.
+              <br />
+              We make it yours.
+            </p>
+
+            <p
+              style={{
+                maxWidth: 680,
+                fontSize: "1rem",
+                lineHeight: 1.8,
+                color: "#9fb3c8",
+                marginBottom: 30,
+              }}
+            >
+              Tattoos, realism, black and grey work, piercing, paintings, and
+              original art. Bring a reference, bring an idea, or bring something
+              you have seen before.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 22 }}>
@@ -252,14 +267,15 @@ export default function Home() {
           </div>
 
           <div
+            className="softOpen delayTwo"
             style={{
               borderRadius: 34,
-              minHeight: 430,
+              minHeight: 410,
               background:
-                "linear-gradient(135deg, rgba(127,220,255,0.20), rgba(7,18,30,0.96) 38%, #04070b 100%)",
+                "linear-gradient(135deg, rgba(127,220,255,0.17), rgba(7,18,30,0.96) 38%, #04070b 100%)",
               border: "1px solid rgba(127,220,255,0.20)",
               boxShadow:
-                "0 36px 110px rgba(0,0,0,0.52), inset 0 1px 0 rgba(255,255,255,0.05)",
+                "0 36px 110px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.05)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -274,8 +290,8 @@ export default function Home() {
                 width: 360,
                 height: 360,
                 borderRadius: "50%",
-                background: "rgba(127,220,255,0.10)",
-                filter: "blur(40px)",
+                background: "rgba(127,220,255,0.09)",
+                filter: "blur(42px)",
               }}
             />
             <div
@@ -306,7 +322,7 @@ export default function Home() {
         style={{
           padding: "24px 20px",
           borderBottom: "1px solid rgba(127,220,255,0.12)",
-          background: "rgba(127,220,255,0.035)",
+          background: "rgba(127,220,255,0.032)",
         }}
       >
         <div
@@ -326,8 +342,8 @@ export default function Home() {
                 borderRadius: 999,
                 border: "1px solid rgba(127,220,255,0.18)",
                 background: "rgba(4,10,16,0.72)",
-                color: "#d9ecf7",
-                fontWeight: 850,
+                color: "#cfd8e3",
+                fontWeight: 750,
                 fontSize: "0.9rem",
               }}
             >
@@ -339,8 +355,9 @@ export default function Home() {
 
       <section
         id="artist"
+        className="softOpen delayThree"
         style={{
-          padding: "86px 20px",
+          padding: "96px 20px",
           borderBottom: "1px solid rgba(127,220,255,0.13)",
         }}
       >
@@ -382,7 +399,7 @@ export default function Home() {
                 position: "absolute",
                 inset: 0,
                 background:
-                  "linear-gradient(180deg, rgba(4,7,11,0.04) 0%, rgba(4,7,11,0.28) 42%, rgba(4,7,11,0.94) 100%)",
+                  "linear-gradient(180deg, rgba(4,7,11,0.04) 0%, rgba(4,7,11,0.30) 42%, rgba(4,7,11,0.94) 100%)",
               }}
             />
             <div style={{ position: "absolute", left: 28, right: 28, bottom: 28 }}>
@@ -392,7 +409,7 @@ export default function Home() {
                   color: "#7fdcff",
                   textTransform: "uppercase",
                   letterSpacing: 2.2,
-                  fontWeight: 950,
+                  fontWeight: 850,
                   fontSize: "0.78rem",
                 }}
               >
@@ -402,9 +419,9 @@ export default function Home() {
                 style={{
                   margin: 0,
                   fontSize: "clamp(2.6rem, 5vw, 4.8rem)",
-                  lineHeight: 0.9,
-                  textTransform: "uppercase",
-                  fontWeight: 950,
+                  lineHeight: 0.96,
+                  fontWeight: 700,
+                  color: "#dbe7f0",
                 }}
               >
                 Diego
@@ -416,39 +433,36 @@ export default function Home() {
             <p
               style={{
                 color: "#7fdcff",
-                fontWeight: 950,
+                fontWeight: 850,
                 textTransform: "uppercase",
                 letterSpacing: 2.2,
                 marginBottom: 12,
               }}
             >
-              Custom work with an artist first approach
+              About Diego
             </p>
 
             <h2 style={sectionTitleStyle}>
-              Art that
+              Art first.
               <br />
-              holds weight.
+              Always.
             </h2>
 
-            <p style={{ color: "#c2d3e2", lineHeight: 1.85, maxWidth: 650, marginBottom: 18 }}>
-              Bring a reference, a memory, a symbol, or a rough idea. The studio helps shape it into a piece that fits the body and the person wearing it.
+            <p style={{ color: "#9fb3c8", lineHeight: 1.85, maxWidth: 650, marginBottom: 18 }}>
+              Diego built Blue Diamond around art first. Tattoos, paintings,
+              custom pieces, black and grey work, realism, and ideas people bring
+              to the chair all live in the same place here.
             </p>
 
-            <p style={{ color: "#c2d3e2", lineHeight: 1.85, maxWidth: 650, marginBottom: 28 }}>
-              The work focuses on presence, contrast, placement, and clean execution across tattoos, piercing, paintings, and visual art.
+            <p style={{ color: "#9fb3c8", lineHeight: 1.85, maxWidth: 650, marginBottom: 28 }}>
+              Bring a reference, bring an idea, or bring something you already
+              like. The shop draws with you and turns it into something that
+              feels like yours.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <a href="#book" style={buttonPrimary}>Start Your Request</a>
-              <a
-                href="https://www.instagram.com/bluediamond.tattoo_studio"
-                target="_blank"
-                rel="noreferrer"
-                style={buttonGhost}
-              >
-                View Instagram
-              </a>
+              <a href="#work" style={buttonPrimary}>View the Work</a>
+              <a href="#book" style={buttonGhost}>Schedule Appointment</a>
             </div>
           </div>
         </div>
@@ -456,6 +470,7 @@ export default function Home() {
 
       <section
         id="work"
+        className="softOpen delayFour"
         style={{
           padding: "86px 20px",
           borderBottom: "1px solid rgba(127,220,255,0.13)",
@@ -465,7 +480,7 @@ export default function Home() {
           <p
             style={{
               color: "#7fdcff",
-              fontWeight: 950,
+              fontWeight: 850,
               textTransform: "uppercase",
               letterSpacing: 2.2,
               marginBottom: 12,
@@ -480,8 +495,9 @@ export default function Home() {
             the shop.
           </h2>
 
-          <p style={{ color: "#c2d3e2", maxWidth: 760, lineHeight: 1.8, marginBottom: 34 }}>
-            Real tattoos from Blue Diamond Tattoo Studio. Different pieces, different placements, different stories.
+          <p style={{ color: "#9fb3c8", maxWidth: 760, lineHeight: 1.8, marginBottom: 34 }}>
+            Real tattoos from Blue Diamond Tattoo Studio. Different pieces,
+            different styles, different stories.
           </p>
 
           <div
@@ -531,7 +547,7 @@ export default function Home() {
                       color: "#7fdcff",
                       textTransform: "uppercase",
                       letterSpacing: 2,
-                      fontWeight: 950,
+                      fontWeight: 850,
                       fontSize: "0.72rem",
                     }}
                   >
@@ -540,10 +556,10 @@ export default function Home() {
                   <h3
                     style={{
                       margin: 0,
-                      fontWeight: 950,
-                      textTransform: "uppercase",
+                      fontWeight: 700,
                       lineHeight: 1,
                       fontSize: "1.35rem",
+                      color: "#dbe7f0",
                     }}
                   >
                     {item.title}
@@ -560,7 +576,8 @@ export default function Home() {
         style={{
           padding: "86px 20px",
           borderBottom: "1px solid rgba(127,220,255,0.13)",
-          background: "radial-gradient(circle at top, rgba(127,220,255,0.13), rgba(0,0,0,0) 44%)",
+          background:
+            "radial-gradient(circle at top, rgba(127,220,255,0.12), rgba(0,0,0,0) 44%)",
         }}
       >
         <div style={{ maxWidth: 1120, margin: "0 auto" }}>
@@ -568,7 +585,7 @@ export default function Home() {
             <p
               style={{
                 color: "#7fdcff",
-                fontWeight: 950,
+                fontWeight: 850,
                 textTransform: "uppercase",
                 letterSpacing: 2.2,
                 marginBottom: 12,
@@ -585,13 +602,14 @@ export default function Home() {
 
             <p
               style={{
-                color: "#c2d3e2",
+                color: "#9fb3c8",
                 lineHeight: 1.8,
                 maxWidth: 760,
                 margin: "0 auto",
               }}
             >
-              Send the idea, placement, size, and budget. The studio will review the request and reach out.
+              Send the idea, placement, size, and budget. The studio will review
+              the request and reach out.
             </p>
           </div>
 
@@ -603,7 +621,7 @@ export default function Home() {
               gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
               gap: 20,
               background:
-                "linear-gradient(135deg, rgba(127,220,255,0.08), rgba(5,12,19,0.98) 44%, #04070b 100%)",
+                "linear-gradient(135deg, rgba(127,220,255,0.07), rgba(5,12,19,0.98) 44%, #04070b 100%)",
               border: "1px solid rgba(127,220,255,0.20)",
               borderRadius: 30,
               padding: 24,
@@ -701,7 +719,7 @@ export default function Home() {
         style={{
           padding: "44px 20px",
           background:
-            "linear-gradient(90deg, rgba(127,220,255,0.16), rgba(24,91,154,0.10), rgba(127,220,255,0.06))",
+            "linear-gradient(90deg, rgba(127,220,255,0.14), rgba(24,91,154,0.09), rgba(127,220,255,0.05))",
           borderBottom: "1px solid rgba(127,220,255,0.13)",
         }}
       >
@@ -721,14 +739,14 @@ export default function Home() {
               style={{
                 margin: "0 0 6px",
                 color: "#7fdcff",
-                fontWeight: 950,
+                fontWeight: 850,
                 textTransform: "uppercase",
                 letterSpacing: 2,
               }}
             >
               Sunday piercing special
             </p>
-            <p style={{ margin: 0, color: "#d8ecf6", fontWeight: 750 }}>
+            <p style={{ margin: 0, color: "#cfd8e3", fontWeight: 650 }}>
               Buy one piercing and get one piercing thirty dollars off on Sundays.
             </p>
           </div>
@@ -739,10 +757,10 @@ export default function Home() {
               display: "inline-block",
               padding: "14px 22px",
               background: "#06101a",
-              color: "#f4f7fb",
+              color: "#dbe7f0",
               textDecoration: "none",
               borderRadius: 999,
-              fontWeight: 950,
+              fontWeight: 850,
               border: "1px solid rgba(127,220,255,0.18)",
             }}
           >
@@ -774,7 +792,7 @@ export default function Home() {
           <p
             style={{
               color: "#7fdcff",
-              fontWeight: 950,
+              fontWeight: 850,
               textTransform: "uppercase",
               letterSpacing: 2.2,
               marginBottom: 12,
@@ -791,7 +809,7 @@ export default function Home() {
 
           <p
             style={{
-              color: "#c2d3e2",
+              color: "#9fb3c8",
               lineHeight: 1.85,
               maxWidth: 760,
               margin: "0 auto 28px",
