@@ -1,51 +1,168 @@
-* {
-  box-sizing: border-box;
+.holding-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(127, 220, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 80% 10%, rgba(36, 94, 160, 0.13), transparent 32%),
+    #030508;
+  color: #dbe7f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  position: relative;
 }
 
-html {
-  scroll-behavior: smooth;
-  background: #030508;
+.holding-card {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  text-align: center;
+  animation: cardRise 1100ms ease forwards;
 }
 
-body {
-  background: #030508;
+.holding-logo {
+  height: 92px;
+  width: auto;
+  display: block;
+  margin: 0 auto 26px;
+  opacity: 0;
+  animation: inkReveal 1200ms ease forwards 200ms;
 }
 
-a {
-  -webkit-tap-highlight-color: transparent;
+.holding-kicker {
+  color: #7fdcff;
+  text-transform: uppercase;
+  letter-spacing: 2.6px;
+  font-weight: 800;
+  margin: 0 0 18px;
+  opacity: 0;
+  animation: inkReveal 1200ms ease forwards 420ms;
 }
 
-@keyframes softOpen {
+.ink-title {
+  font-size: clamp(3rem, 9vw, 6.4rem);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 0 0 26px;
+  color: #dbe7f0;
+  opacity: 0;
+  filter: blur(16px);
+  transform: scale(0.98);
+  animation: inkSpread 1500ms ease forwards 650ms;
+}
+
+.holding-copy {
+  color: #9fb3c8;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin: 0 auto 30px;
+  max-width: 560px;
+  opacity: 0;
+  animation: inkReveal 1200ms ease forwards 1000ms;
+}
+
+.holding-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: inkReveal 1200ms ease forwards 1200ms;
+}
+
+.holding-actions a {
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 850;
+  color: #06101a;
+  background: #7fdcff;
+}
+
+.holding-actions a:nth-child(2) {
+  color: #dbe7f0;
+  background: rgba(127, 220, 255, 0.055);
+  border: 1px solid rgba(127, 220, 255, 0.26);
+}
+
+.ink-cloud {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  background: rgba(127, 220, 255, 0.08);
+  filter: blur(65px);
+  opacity: 0;
+  animation: cloudBloom 2400ms ease forwards;
+}
+
+.ink-one {
+  top: 10%;
+  left: 8%;
+}
+
+.ink-two {
+  right: 6%;
+  bottom: 8%;
+  animation-delay: 500ms;
+}
+
+@keyframes inkSpread {
+  0% {
+    opacity: 0;
+    filter: blur(18px);
+    letter-spacing: 0.08em;
+    transform: scale(0.97);
+  }
+
+  55% {
+    opacity: 0.85;
+    filter: blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    letter-spacing: 0.01em;
+    transform: scale(1);
+  }
+}
+
+@keyframes inkReveal {
   from {
     opacity: 0;
-    transform: translateY(18px);
-    filter: blur(6px);
+    filter: blur(8px);
+    transform: translateY(14px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
     filter: blur(0);
+    transform: translateY(0);
   }
 }
 
-.softOpen {
-  opacity: 0;
-  animation: softOpen 900ms ease forwards;
+@keyframes cardRise {
+  from {
+    transform: translateY(14px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
-.delayOne {
-  animation-delay: 120ms;
-}
+@keyframes cloudBloom {
+  from {
+    opacity: 0;
+    transform: scale(0.65);
+  }
 
-.delayTwo {
-  animation-delay: 260ms;
-}
-
-.delayThree {
-  animation-delay: 420ms;
-}
-
-.delayFour {
-  animation-delay: 600ms;
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
 }
